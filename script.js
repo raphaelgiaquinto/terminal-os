@@ -115,67 +115,92 @@ var ls = new Command("ls", () => {
 var htop = new Command("htop", () => {
     process("clear");
     terminal.innerHTML = `
-        <p><b>CPU: [###&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;] 10% </b>
+        <p><b>CPU: [#####################################] 100% </b>
+        <p><b>Memory: 7.4GB/8GB </b>
         <p><b>Tâches: </b>11</p>
         <table>
             <tr id="htop-bar">
                 <td><b>PID</b></td>
                 <td><b>USER</b></td>
+                <td><b>CPU</b></td>
+                <td><b>MEMORY</b></td>
                 <td><b>COMMAND</b></td>
             </tr>
             <tr>
                 <td>102454</td>
                 <td>raphael</td>
+                <td>2.0%</td>
+                <td>1.5%</td>
                 <td>Javascript</td>
             </tr>
             <tr>
                 <td>4587</td>
                 <td>raphael</td>
+                <td>2.0%</td>
+                <td>3.0%</td>
                 <td>Vue.js</td>
             </tr>
             <tr>
                 <td>447</td>
                 <td>raphael</td>
+                <td>8.0%</td>
+                <td>10.0%</td>
                 <td>Node.js</td>
             </tr>
-            <tr>
+            <tr class="java">
                 <td>456787</td>
                 <td>raphael</td>
+                <td>99.0%</td>
+                <td>110.0%</td>
                 <td>Java</td>
             </tr>
-            <tr>
+            <tr class="java">
                 <td>456787</td>
                 <td>raphael</td>
+                <td>80.0%</td>
+                <td>80.0%</td>
                 <td>Spring</td>
             </tr>
             <tr>
                 <td>154</td>
                 <td>raphael</td>
+                <td>5.0%</td>
+                <td>15.0%</td>
                 <td>Angular</td>
             </tr>
             <tr>
                 <td>1234</td>
                 <td>raphael</td>
+                <td>0.8%</td>
+                <td>0.5%</td>
                 <td>PostgreSQL</td>
             </tr>
             <tr>
                 <td>57</td>
                 <td>raphael</td>
+                <td>0.3%</td>
+                <td>0.25%</td>
                 <td>MongoDB</td>
             </tr>
             <tr>
                 <td>78999</td>
                 <td>raphael</td>
+                <td>1.0%</td>
+                <td>0.5%</td>
                 <td>C / C++</td>
             </tr>
             <tr>
                 <td>1478</td>
                 <td>raphael</td>
+                <td>10.0%</td>
+                <td>10.0%</td>
                 <td>OpenCV</td>
             </tr>
             <tr>
                 <td>1478</td>
                 <td>raphael</td>
+                <td>0%</td>
+                <td>0%</td>
                 <td>Git</td>
             </tr>
             </table>
