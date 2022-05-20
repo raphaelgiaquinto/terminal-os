@@ -60,6 +60,8 @@ var help = new Command("help", () => {
         <p><b>ls</b>: affiche le répertoire courant (diplômes)</p>
         <h4>Commandes système</h4>
         <p><b>audio-test</b>: test du bon fonctionnement du son</p>
+        <p><b>java</b>: lance un programme java</p>
+
     `;
 });
 
@@ -188,6 +190,17 @@ var audioTest = new Command("audio-test", ()=>{
     audio.play();
 });
 
+
+var java = new Command("java", ()=>{
+    process("clear");
+    terminal.innerHTML = `
+        <div class="java">
+            <p>An error has occured: java.lang.OutOfMemoryError: Java heap space </p>
+            <p>Java needs at least 32GB of memory to run pretty much correctly</p>
+        </div>
+    `;
+});
+
 commands.push(clear);
 commands.push(about);
 commands.push(help);
@@ -195,6 +208,7 @@ commands.push(historyC);
 commands.push(htop);
 commands.push(ls);
 commands.push(audioTest);
+commands.push(java);
 
 var dateDiv = document.getElementById("date");
 dateDiv.innerHTML = new Date().toLocaleString();
