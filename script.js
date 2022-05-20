@@ -60,7 +60,6 @@ var help = new Command("help", () => {
         <p><b>ls</b>: affiche le répertoire courant (diplômes)</p>
         <h4>Commandes système</h4>
         <p><b>audio-test</b>: test du bon fonctionnement du son</p>
-        <p><b>js</b>: ouvre une session de codage en javascript</p>
     `;
 });
 
@@ -181,13 +180,6 @@ var htop = new Command("htop", () => {
     `;
 });
 
-var js = new Command("js", () => {
-    process("clear");
-    terminal.innerHTML = `
-    <input id="code" type="text" placeholder="code...">
-    `;
-});
-
 var audio = new Audio("horn.mp3");
 audio.volume = 1;
 audio.playbackRate = 0.5;
@@ -203,7 +195,6 @@ commands.push(historyC);
 commands.push(htop);
 commands.push(ls);
 commands.push(audioTest);
-commands.push(js);
 
 var dateDiv = document.getElementById("date");
 dateDiv.innerHTML = new Date().toLocaleString();
