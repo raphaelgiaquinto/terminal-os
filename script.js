@@ -116,7 +116,7 @@ var htop = new Command("htop", () => {
     process("clear");
     terminal.innerHTML = `
         <p><b>CPU: [#####################################] 100% </b>
-        <p><b>Memory: 7.4GB/8GB </b>
+        <p><b>Mémoire: 7.4GB/8GB </b>
         <p><b>Tâches: </b>11</p>
         <table>
             <tr id="htop-bar">
